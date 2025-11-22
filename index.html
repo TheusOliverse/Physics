@@ -5,22 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/8611/8611170.png">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header class="header">
-        <div class="nav_bar">
-            <a href="#" class="link_bar sha" style="display: flex; align-items: center; gap: 5px;">
-                <ion-icon name="school-outline" style="font-size: 35px;"></ion-icon>
-            </a>
-            <div class="bar_right">
-                <a href="#tarefas" class="link_bar sha hover_bar">Tarefas</a>
-                <a href="#" class="link_bar sha hover_bar">Cursos</a>
-                <a href="#" class="link_bar sha hover_bar">Livros</a>
-                <a href="#" class="link_bar sha hover_bar">Arquivos</a>
-            </div>
-        </div>
         <div class="titulo">
             <ion-icon name="planet-outline" class="icone_titulo sha"></ion-icon>
             <h1 class="fonte f1 sha">Licenciatura em Física</h1>
@@ -34,6 +24,17 @@
 
         <div class="shadow_titulo"></div>
     </header>
+    <div class="nav_bar">
+            <a href="#" class="link_bar sha" style="display: flex; align-items: center; gap: 5px;">
+                <ion-icon name="school-outline" style="font-size: 35px;"></ion-icon>
+            </a>
+            <div class="bar_right">
+                <a href="#tarefas" class="link_bar sha hover_bar">Tarefas</a>
+                <a href="#cursos" class="link_bar sha hover_bar">Cursos</a>
+                <a href="#livros" class="link_bar sha hover_bar">Livros</a>
+                <a href="#arquivos" class="link_bar sha hover_bar">Arquivos</a>
+            </div>
+        </div>
 
     <div class="div6">
         <img class="div6_img"
@@ -95,7 +96,7 @@
             </div>
         </section>
 
-        <section class="section4">
+        <section class="section4" id="cursos">
             <div class="div_sec4">
                 <h1 class="h_sec4">CURSOS GRATUITOS COM CERTIFICAÇÃO GRATUITA, 100% SEGURO!</h1>
                 <p class="p_sec4">disponibilizado uma lista de links que direcionam o usuário para várias plataformas
@@ -468,7 +469,7 @@
 
         </section>
 
-        <section class="section3">
+        <section class="section3" id="livros">
             <div class="div_tit_sec3">
                 <ion-icon class="icon_gear" name="settings-outline"></ion-icon>
                 <div class="degrade_2"></div>
