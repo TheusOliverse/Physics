@@ -360,6 +360,7 @@ li {
     display: flex;
     gap: 20px;
     align-items: center;
+    height: auto;
 }
 
 .li_ativ {
@@ -661,12 +662,14 @@ footer {
     animation: gear 3s linear infinite;
 }
 
-.li_book{
+.li_book {
     display: flex;
+    flex-direction: column;
+    gap: 10px;
     gap: 15px;
 }
 
-.img_book{
+.img_book {
     border: 2px solid var(--cor3);
     border-radius: 10px;
     box-shadow: 0 0 5px var(--cor3);
@@ -674,28 +677,48 @@ footer {
     height: 200px;
 }
 
-.link_book{
+.link_book {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 5px;
 }
 
-.ul_book{
+.h3_book{
+    transition: 0.3s;
+}
+
+.link_book:hover .h3_book {
+    transition: 0.3s;
+    color: var(--cor3);
+}
+
+.link_book:hover .icon_book {
+    transition: 0.3s;
+    color: var(--cor3);
+}
+
+.ul_book {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     padding: 25px 0px;
 }
-.f10{
+
+.f10 {
     max-width: 20px;
 }
-.padd{
+
+.padd {
     padding: 50px 20px;
 }
+
+.icon_book {
+    font-size: 30px;
+}
+
+
 @keyframes gear {
     0% {
         transform: rotate(0deg);
@@ -708,6 +731,10 @@ footer {
 
 @media only screen and (orientation: portrait) {
     .h_sec4 {
+        font-size: 20px;
+    }
+
+    .icon_book {
         font-size: 20px;
     }
 
