@@ -1032,6 +1032,10 @@ footer {
     color: orangered;
 }
 
+.artc_links{
+    display: none;
+}
+
 @media only screen and (orientation: portrait) {
     .img_profs {
         width: 80px;
