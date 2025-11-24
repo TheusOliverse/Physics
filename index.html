@@ -10,10 +10,13 @@
 </head>
 
 <body>
+    <!--Parte inicial do site--->
     <header class="header" id="header">
         <div class="titulo">
             <ion-icon name="planet-outline" class="icone_titulo sha"></ion-icon>
-            <h1 class="fonte f1 sha" id="titulo_header">Licenciatura em Física</h1>
+            <h1 class="fonte f1 sha disp3" id="titulo_header">Licenciatura em Física</h1>
+            <h1 class="fonte f1 sha disp4" id="titulo_header">Licenc. em Física</h1>
+
             <h2 class="fonte f2 sha" id="subtit_header">Site Acadêmico, Simplificado</h2>
             <p class="fonte f3 sha" id="p_header_tit">Dedicado aos estudantes de Física (2025)</p>
             <div class="buttons_inicio" id="but_ini">
@@ -26,6 +29,12 @@
         <div class="shadow_titulo2" id="background_header"></div>
     </header>
 
+    <!--Icone de interatividade (scrool)--->
+    <div class="ani_go" id="ani_go">
+        <ion-icon class="icon_go" name="chevron-down-circle-outline"></ion-icon>
+    </div>
+
+    <!--Nav bar do site--->
     <div class="nav_bar">
         <a href="#" class="link_bar sha" style="display: flex; align-items: center; gap: 5px;">
             <ion-icon name="school-outline" style="font-size: 35px;"></ion-icon>
@@ -38,6 +47,7 @@
         </div>
     </div>
 
+    <!--Convite oara outro projeto--->
     <div class="div6" id="conv">
         <img class="div6_img"
             src="https://static.vecteezy.com/system/resources/previews/028/801/340/large_2x/business-startup-growth-flying-rocket-launch-wallpaper-ai-generated-free-photo.jpg">
@@ -54,21 +64,24 @@
         </div>
     </div>
 
+    <!--Caixas de informações--->
     <div class="div1">
-        <h1 style="font-size: 20px; width: 100%; display: flex; justify-content: center;">Bons estudos!</h1>
+        <h1 style="font-size: 20px; width: 100%; display: flex; justify-content: center; 
+        align-items: center;">Bons estudos! 
+        <ion-icon style="font-size: 25px;" name="star-outline"></ion-icon></h1>
         <ul class="caixas">
-            <li class="caixa">
+            <li id="box_inf1" class="caixa">
                 <ion-icon name="flash-outline" class="icon_caixa"></ion-icon>
                 <h1 class="titulo_caixa">Muito mais rápido</h1>
                 <p class="p_caixa">Site criado com o intuito de entregar as informações do SIGAA de forma simples.</p>
             </li>
-            <li class="caixa">
+            <li id="box_inf2" class="caixa">
                 <ion-icon name="happy-outline" class="icon_caixa"></ion-icon>
                 <h1 class="titulo_caixa">Interativo</h1>
                 <p class="p_caixa">Foco em disponibilizar as atividades pendentes e/ou ajudar o discente com recursos.
                 </p>
             </li>
-            <li class="caixa">
+            <li id="box_inf3" class="caixa">
                 <ion-icon name="telescope-outline" class="icon_caixa"></ion-icon>
                 <h1 class="titulo_caixa">Explore!</h1>
                 <p class="p_caixa">A Física é um caminho longo. Explore livros, cursos e outros!</p>
@@ -76,7 +89,56 @@
         </ul>
     </div>
 
+    <!--Informações do IFAM--->
+    <div class="div7" id="ifam_infos">
+        <h2 class="sha" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Breves informações do
+            IFAM</h2>
+        <ul class="ifam_info_ul">
+            <li class="ifam_info_li">
+                <img src="https://www.ifpb.edu.br/prpipg/pesquisa/imagens-pesquisa/ifpb.png/@@images/0609b1d7-4a7d-41be-bd18-081ecb35eb9e.png"
+                    class="display2">
+                <img class="img_inf_ifam display1"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKYV7SLjA2CAcnaJfFnRlZJ4GR9bYWopMwSA&s">
+                <div class="div_p_ifam_info">
+                    <h3 class="sha">IFAM - Campus Manaus Centro</h3>
+                    <p class="p_inf_ifam">
+                        <ion-icon class="icon_ifam_inf" name="location-outline"></ion-icon>
+                        Av. 7 de Setembro, 1975, Centro, Manaus - AM, CEP 69020-120.
+                    </p>
+                    <a href="https://cmc.ifam.edu.br/" class="p_inf_ifam a1"><ion-icon class="icon_ifam_inf a1"
+                            name="chevron-forward-circle-outline"></ion-icon>Portal oficial IFAM CMC</a>
+                    <p class="p_inf_ifam">
+                        <ion-icon class="icon_ifam_inf" name="call-outline"></ion-icon>
+                        (92) 3621-6700.
+                    </p>
+                </div>
+            </li>
+            <li class="ifam_info_li">
+                <div class="div_p_ifam_info org_1">
+                    <h3 class="sha" style="display: flex; align-items: center; gap: 10px;"><ion-icon name="layers-outline" class="icon_ifam_inf"></ion-icon>Outras informações importantes</h3>
+                    <p class="p_inf_ifam p2">
+                        <i class="i_ifam_inf">Setor de Serviço Social:</i>
+                        (92) 3621-6741 -
+                        servicosocial_cmc@ifam.edu.br
+                    </p>
+
+                    <p class="p_inf_ifam p2">
+                        <i class="i_ifam_inf">Setor de Psicologia:</i>
+                        (92) 3621-6774 -
+                        psicologia_cmc@ifam.edu.br
+                    </p>
+
+                    <p class="p_inf_ifam p2">
+                        <i class="i_ifam_inf">Setor de Saúde:</i>
+                        (92) 3621-6763 -
+                        medico.cmc@ifam.edu.br
+                    </p>
+            </li>
+        </ul>
+    </div>
+
     <main class="main">
+        <!--Siga o CALFIS--->
         <section id="start" class="section1">
             <div class="logo_tit_calf">
                 <img class="logo_calf"
@@ -98,6 +160,45 @@
             </div>
         </section>
 
+        <section class="profs" id="profs">
+            <h2 class="sha" style="display: flex; align-items: center; gap: 10px;">
+                <ion-icon class="sha" style="font-size: 25px;" name="person-outline"></ion-icon>
+                Professores (1* Período)</h2>
+            <ul class="ul_profs">
+                <li class="li_profs">
+                    <img src="./Profs/maria stela.jpg" class="img_profs">
+                    <h3 class="h3_profs">profa. Maria Stela</h3>
+                    <p class="p_profs">Metodologia do Trabalho Científico</p>
+                </li>
+                <li class="li_profs">
+                    <img src="http://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K4213510H8" class="img_profs">
+                    <h3 class="h3_profs">prof. Paulo Vinícius</h3>
+                    <p class="p_profs">Pré-Cálculo</p>
+                </li>
+                <li class="li_profs">
+                    <img src="./Profs/nayara.jpg" class="img_profs">
+                    <h3 class="h3_profs">profa. Nayara</h3>
+                    <p class="p_profs">Metodologia da Pesquisa Educacional I</p>
+                </li>
+                <li class="li_profs">
+                    <img src="./Profs/marcio_amazonas.jpg" class="img_profs">
+                    <h3 class="h3_profs">prof. Marcio Amazonas</h3>
+                    <p class="p_profs">História & Introdução à Física</p>
+                </li>
+                <li class="li_profs">
+                    <img src="./Profs/tania_midian.jpg" class="img_profs">
+                    <h3 class="h3_profs">profa. Tania Midian</h3>
+                    <p class="p_profs">Sociolinguística</p>
+                </li>
+                <li class="li_profs">
+                    <img src="./Profs/aline_freitas.jpg" class="img_profs">
+                    <h3 class="h3_profs">profa. Aline Freitas</h3>
+                    <p class="p_profs">Química</p>
+                </li>
+            </ul>
+        </section>
+
+        <!--Oferecimento de cursos--->
         <section class="section4" id="cursos">
             <div class="div_sec4">
                 <h1 class="h_sec4">CURSOS GRATUITOS COM CERTIFICAÇÃO GRATUITA, 100% SEGURO!</h1>
@@ -110,6 +211,7 @@
             </div>
         </section>
 
+        <!--Atividades da semana--->
         <section class="section5">
             <div class="div_tit_news">
                 <ion-icon name="calendar-outline" class="icon_news sha"></ion-icon>
@@ -123,7 +225,7 @@
                     </div>
                     <ion-icon name="alert-circle-outline" class="icon_art"></ion-icon>
                 </article>
-                
+
                 <article class="art_news">
                     <div>
                         <h2 class="h2_news">#Atividade</h2>
@@ -134,15 +236,16 @@
             </div>
         </section>
 
-        <div class="div1 div2 padd">
-            <div class="div1 div2 div3">
+        <!--Lista de eventos do IFAM--->
+        <div class="div1 div2 padd fundo_1">
+            <div class="div1 div2 div3 fundo_1">
                 <h1 class="even_tit sha" style="display: flex; align-items: center; gap: 10px;"> <ion-icon
                         name="layers-outline"></ion-icon> | Eventos Especiais</h1>
                 <div class="degrade_div"></div>
                 <p class="sha">Eventos que ocorreram ou que irão acontecer.</p>
             </div>
 
-            <ul class="ul_even">
+            <ul class="ul_even fundo_2">
                 <li class="li_even">
                     <img class="img_even" src="https://www.iq.unesp.br/Home/Extensao/proenc/fisica.jpg">
                     <h1 class="tit_even">Dia do Físico</h1>
@@ -169,6 +272,7 @@
             </ul>
         </div>
 
+        <!--Listas de tarefas dos periodos--->
         <section id="tarefas" class="section2">
             <div class="div_sec2">
                 <div style="display: flex; flex-direction: column; gap: 10px;">
@@ -494,13 +598,14 @@
             </div>
 
         </section>
-
+        
+        <!--Biblioteca do Drive--->
         <section class="section3" id="livros">
             <div class="div_tit_sec3">
-                <ion-icon class="icon_gear" name="settings-outline"></ion-icon>
+                <ion-icon class="icon_gear sha" name="settings-outline"></ion-icon>
                 <div class="degrade_2"></div>
                 <div class="div_sec3_tit">
-                    <h2>Livros</h2>
+                    <h2 class="sha">Livros</h2>
                     <p>Livros em PDF para ajudar o discente em determinadas disciplinas. Ao longo do curso, outros
                         materiais serão adicionados.</p>
                 </div>
@@ -508,53 +613,55 @@
 
             <ul class="ul_book">
                 <li class="li_book">
-                    <a href="" class="link_book">
+                    <a href="https://drive.google.com/drive/folders/1M5T0h92zwBwzp9dfuHLJ07KB63k9mP72?usp=drive_link" class="link_book">
                         <ion-icon name="shapes-outline" class="icon_book"></ion-icon>
                         <h3 class="h3_book">Matemática</h3>
                     </a>
-                    <a href="" class="link_book">
+                    <a href="https://drive.google.com/drive/folders/1LFHDUpeAdc0NdTI5ypn1Hw5M44d9_CH4?usp=drive_link" class="link_book">
                         <ion-icon name="bulb-outline" class="icon_book"></ion-icon>
                         <h3 class="h3_book">Física</h3>
                     </a>
-                    <a href="" class="link_book">
+                    <a href="https://drive.google.com/drive/folders/1MbIj-VqSrYLXy8ZnOOC8bzGZQBGL3QuY?usp=drive_link" class="link_book">
                         <ion-icon name="flask-outline" class="icon_book"></ion-icon>
                         <h3 class="h3_book">Química</h3>
                     </a>
                 </li>
 
                 <li class="li_book">
-                    <a href="" class="link_book">
+                    <a href="https://drive.google.com/drive/folders/1WSaV0gU4yO3hR35DNA3A7JOgF-sDG3Rs?usp=drive_link" class="link_book">
                         <ion-icon name="code-slash-outline" class="icon_book"></ion-icon>
                         <h3 class="h3_book">Programação</h3>
                     </a>
-                    <a href="" class="link_book">
+                    <a href="https://drive.google.com/drive/folders/1h0F8z8pZTEY4hBPsf5n41cc2HG_Xc-16?usp=drive_link" class="link_book">
                         <ion-icon name="people-outline" class="icon_book"></ion-icon>
                         <h3 class="h3_book">Pedagogia</h3>
                     </a>
-                    <a href="" class="link_book">
+                    <a href="https://drive.google.com/drive/folders/1bCOIkuElmIiaySVmahEsE4hMbKbBlHuJ?usp=drive_link" class="link_book">
                         <ion-icon name="leaf-outline" class="icon_book"></ion-icon>
                         <h3 class="h3_book">Biologia</h3>
                     </a>
                 </li>
 
                 <li class="li_book">
-                    <a href="" class="link_book">
+                    <a href="https://drive.google.com/drive/folders/1RsPHtHDiXYAoe47TEX8ctBJqBG7tVmKo?usp=drive_link" class="link_book">
                         <ion-icon name="receipt-outline" class="icon_book"></ion-icon>
                         <h3 class="h3_book">Português</h3>
                     </a>
-                    <a href="" class="link_book">
+                    <a href="https://drive.google.com/drive/folders/1x4mlWr-2T0hqoc654TjLmFjPQNaKuCxN?usp=drive_link" class="link_book">
                         <ion-icon name="time-outline" class="icon_book"></ion-icon>
                         <h3 class="h3_book">História</h3>
                     </a>
-                    <a href="" class="link_book">
+                    <a href="https://drive.google.com/drive/folders/1-AdRhnRZqI4kc6KSPTNyHwNIoBMjfbe5?usp=drive_link" class="link_book">
                         <ion-icon name="globe-outline" class="icon_book"></ion-icon>
                         <h3 class="h3_book">Outros</h3>
                     </a>
                 </li>
             </ul>
+            <p><i>As opções ainda são bastante limitadas, o que pode ser um tanto quanto frustrante para você, estudante. Em breve será possível fazer requisição de livros por e-mail.</i></p>
         </section>
     </main>
 
+    <!--Lista de links do footer--->
     <footer>
         <div class="marca_footer">
             <ion-icon class="icon_footer" name="planet-outline"></ion-icon>
@@ -565,14 +672,14 @@
         </div>
         <ul class="ul_footer">
             <li class="li_footer">
-                <a class="text_footer" href="">IFAM-CMC</a>
-                <a class="text_footer" href="">SIGAA</a>
-                <a class="text_footer" href="">CALFÍS</a>
+                <a class="text_footer" href="https://cmc.ifam.edu.br/">IFAM-CMC</a>
+                <a class="text_footer" href="https://sig.ifam.edu.br/sigaa/verTelaLogin.do">SIGAA</a>
+                <a class="text_footer" href="https://www.instagram.com/calfis_ifam?utm_source=ig_web_button_share_sheet&igsh=ZXEzc2diZnZuNmtv">CALFÍS</a>
             </li>
             <li class="li_footer">
-                <a class="text_footer" href="">IFAM-CMC - Instagram</a>
-                <a class="text_footer" href="">IFAM-CMC - Telegram</a>
-                <a class="text_footer" href="">IFAM-CMC - Whatsapp</a>
+                <a class="text_footer" href="https://www.instagram.com/ifam_centro?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">IFAM-CMC - Instagram</a>
+                <a class="text_footer" href="https://t.me/+kE_XzX6DiCIxZjgx">IFAM-CMC - Telegram</a>
+                <a class="text_footer" href="https://whatsapp.com/channel /0029VaSQd6o8qlzusy8Q4r45">IFAM-CMC - Whatsapp</a>
             </li>
         </ul>
     </footer>
