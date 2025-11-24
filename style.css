@@ -994,6 +994,44 @@ footer {
     gap: 10px;
 }
 
+/*detalhes sobre os cursos*/
+
+.ul_cursos{
+    transition: 0.3s;
+    display: flex;
+    background: var(--cor6);
+    padding: 20px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.article_links{
+    padding: 40px 0px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.but_ocult_curso{
+    background: none;
+    color: red;
+    border-radius: 20px;
+    padding: 4px;
+    border: 2px solid red;
+}
+
+.hover_curso{
+    transition: 0.3s;
+}
+.hover_curso:hover{
+    transition: 0.3s;
+    color: orangered;
+}
+
 @media only screen and (orientation: portrait) {
     .img_profs {
         width: 80px;

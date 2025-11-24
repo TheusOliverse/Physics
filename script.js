@@ -145,3 +145,15 @@ window.addEventListener('scroll', () => {
         icon_go.classList.add("ani_go2");
     }
 })
+
+//Open cursos para o usuário
+let cursos_g = document.getElementById("ofc_curso");
+document.getElementById("artc_links").style.display = 'none'
+cursos_g.addEventListener('click', () => {
+    document.getElementById("artc_links").style.display = ''
+})
+
+document.getElementById("but_ocult_curso").addEventListener('click', () => {
+    document.getElementById("artc_links").style.display = 'none'
+})
+

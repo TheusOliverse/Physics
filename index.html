@@ -67,8 +67,9 @@
     <!--Caixas de informações--->
     <div class="div1">
         <h1 style="font-size: 20px; width: 100%; display: flex; justify-content: center; 
-        align-items: center;">Bons estudos! 
-        <ion-icon style="font-size: 25px;" name="star-outline"></ion-icon></h1>
+        align-items: center;">Bons estudos!
+            <ion-icon style="font-size: 25px;" name="star-outline"></ion-icon>
+        </h1>
         <ul class="caixas">
             <li id="box_inf1" class="caixa">
                 <ion-icon name="flash-outline" class="icon_caixa"></ion-icon>
@@ -91,7 +92,8 @@
 
     <!--Informações do IFAM--->
     <div class="div7" id="ifam_infos">
-        <h2 class="sha" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Breves informações do
+        <h2 class="sha" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Breves
+            informações do
             IFAM</h2>
         <ul class="ifam_info_ul">
             <li class="ifam_info_li">
@@ -115,7 +117,8 @@
             </li>
             <li class="ifam_info_li">
                 <div class="div_p_ifam_info org_1">
-                    <h3 class="sha" style="display: flex; align-items: center; gap: 10px;"><ion-icon name="layers-outline" class="icon_ifam_inf"></ion-icon>Outras informações importantes</h3>
+                    <h3 class="sha" style="display: flex; align-items: center; gap: 10px;"><ion-icon
+                            name="layers-outline" class="icon_ifam_inf"></ion-icon>Outras informações importantes</h3>
                     <p class="p_inf_ifam p2">
                         <i class="i_ifam_inf">Setor de Serviço Social:</i>
                         (92) 3621-6741 -
@@ -163,7 +166,8 @@
         <section class="profs" id="profs">
             <h2 class="sha" style="display: flex; align-items: center; gap: 10px;">
                 <ion-icon class="sha" style="font-size: 25px;" name="person-outline"></ion-icon>
-                Professores (1* Período)</h2>
+                Professores (1* Período)
+            </h2>
             <ul class="ul_profs">
                 <li class="li_profs">
                     <img src="./Profs/maria stela.jpg" class="img_profs">
@@ -171,7 +175,8 @@
                     <p class="p_profs">Metodologia do Trabalho Científico</p>
                 </li>
                 <li class="li_profs">
-                    <img src="http://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K4213510H8" class="img_profs">
+                    <img src="http://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K4213510H8"
+                        class="img_profs">
                     <h3 class="h3_profs">prof. Paulo Vinícius</h3>
                     <p class="p_profs">Pré-Cálculo</p>
                 </li>
@@ -204,12 +209,34 @@
                 <h1 class="h_sec4">CURSOS GRATUITOS COM CERTIFICAÇÃO GRATUITA, 100% SEGURO!</h1>
                 <p class="p_sec4">Disponibilizado uma lista de links que direcionam o usuário para várias plataformas
                     que oferecem cursos gratuitos.</p>
-                <button class="but_sec4">Experimentar</button>
+                <button id="ofc_curso" class="but_sec4">Experimentar</button>
             </div>
             <div>
                 <img src="https://i.pinimg.com/736x/29/d6/78/29d678acd6670fcd03f4202643d42585.jpg" class="img_sec4">
             </div>
         </section>
+
+        <!--Lista de links para fazer cursos--->
+        <article class="article_links" id="artc_links">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0px 30px;">
+                <h3 style="color: red; filter: drop-shadow(0 0 10px red);">Atenção!</h3>
+                <button class="but_ocult_curso" id="but_ocult_curso">Ocultar</button>
+            </div>
+            <p class="sha">Em alguns sites você precisa achar os cursos com o destaque "gratuito". No caso do <i
+                    style="color: orange;">Aprenda Mais MEC</i> e o <i style="color: orange;">Mais IFMG</i> todos os
+                cursos são 100% gratuitos.</p>
+            <ul class="ul_cursos">
+                <a class="hover_curso" href="https://mais.ifmg.edu.br/maisifmg/">Mais IFMG</a>
+                <a class="hover_curso" href="https://aprendamais.mec.gov.br/">Aprenda Mais MEC</a>
+                <a class="hover_curso" href="https://www.coursera.org/">Coursera</a>
+                <a class="hover_curso" href="https://www.ev.org.br/">Bradesco</a>
+                <a class="hover_curso" href="https://www.freecodecamp.org">Programação gratuita (FCC)</a>
+                <a class="hover_curso" href="https://www.cursosvirtuais.net/cursos/animais-pets.html">Cursos
+                    Virtuais</a>
+                <a class="hover_curso" href="https://www.primecursos.com.br/">Prime cursos</a>
+                <a class="hover_curso" href="https://educacao-executiva.fgv.br/cursos/gratuitos">FGV Online</a>
+            </ul>
+        </article>
 
         <!--Atividades da semana--->
         <section class="section5">
@@ -598,7 +625,7 @@
             </div>
 
         </section>
-        
+
         <!--Biblioteca do Drive--->
         <section class="section3" id="livros">
             <div class="div_tit_sec3">
@@ -613,51 +640,61 @@
 
             <ul class="ul_book">
                 <li class="li_book">
-                    <a href="https://drive.google.com/drive/folders/1M5T0h92zwBwzp9dfuHLJ07KB63k9mP72?usp=drive_link" class="link_book">
+                    <a href="https://drive.google.com/drive/folders/1M5T0h92zwBwzp9dfuHLJ07KB63k9mP72?usp=drive_link"
+                        class="link_book">
                         <ion-icon name="shapes-outline" class="icon_book"></ion-icon>
                         <h3 class="h3_book">Matemática</h3>
                     </a>
-                    <a href="https://drive.google.com/drive/folders/1LFHDUpeAdc0NdTI5ypn1Hw5M44d9_CH4?usp=drive_link" class="link_book">
+                    <a href="https://drive.google.com/drive/folders/1LFHDUpeAdc0NdTI5ypn1Hw5M44d9_CH4?usp=drive_link"
+                        class="link_book">
                         <ion-icon name="bulb-outline" class="icon_book"></ion-icon>
                         <h3 class="h3_book">Física</h3>
                     </a>
-                    <a href="https://drive.google.com/drive/folders/1MbIj-VqSrYLXy8ZnOOC8bzGZQBGL3QuY?usp=drive_link" class="link_book">
+                    <a href="https://drive.google.com/drive/folders/1MbIj-VqSrYLXy8ZnOOC8bzGZQBGL3QuY?usp=drive_link"
+                        class="link_book">
                         <ion-icon name="flask-outline" class="icon_book"></ion-icon>
                         <h3 class="h3_book">Química</h3>
                     </a>
                 </li>
 
                 <li class="li_book">
-                    <a href="https://drive.google.com/drive/folders/1WSaV0gU4yO3hR35DNA3A7JOgF-sDG3Rs?usp=drive_link" class="link_book">
+                    <a href="https://drive.google.com/drive/folders/1WSaV0gU4yO3hR35DNA3A7JOgF-sDG3Rs?usp=drive_link"
+                        class="link_book">
                         <ion-icon name="code-slash-outline" class="icon_book"></ion-icon>
                         <h3 class="h3_book">Programação</h3>
                     </a>
-                    <a href="https://drive.google.com/drive/folders/1h0F8z8pZTEY4hBPsf5n41cc2HG_Xc-16?usp=drive_link" class="link_book">
+                    <a href="https://drive.google.com/drive/folders/1h0F8z8pZTEY4hBPsf5n41cc2HG_Xc-16?usp=drive_link"
+                        class="link_book">
                         <ion-icon name="people-outline" class="icon_book"></ion-icon>
                         <h3 class="h3_book">Pedagogia</h3>
                     </a>
-                    <a href="https://drive.google.com/drive/folders/1bCOIkuElmIiaySVmahEsE4hMbKbBlHuJ?usp=drive_link" class="link_book">
+                    <a href="https://drive.google.com/drive/folders/1bCOIkuElmIiaySVmahEsE4hMbKbBlHuJ?usp=drive_link"
+                        class="link_book">
                         <ion-icon name="leaf-outline" class="icon_book"></ion-icon>
                         <h3 class="h3_book">Biologia</h3>
                     </a>
                 </li>
 
                 <li class="li_book">
-                    <a href="https://drive.google.com/drive/folders/1RsPHtHDiXYAoe47TEX8ctBJqBG7tVmKo?usp=drive_link" class="link_book">
+                    <a href="https://drive.google.com/drive/folders/1RsPHtHDiXYAoe47TEX8ctBJqBG7tVmKo?usp=drive_link"
+                        class="link_book">
                         <ion-icon name="receipt-outline" class="icon_book"></ion-icon>
                         <h3 class="h3_book">Português</h3>
                     </a>
-                    <a href="https://drive.google.com/drive/folders/1x4mlWr-2T0hqoc654TjLmFjPQNaKuCxN?usp=drive_link" class="link_book">
+                    <a href="https://drive.google.com/drive/folders/1x4mlWr-2T0hqoc654TjLmFjPQNaKuCxN?usp=drive_link"
+                        class="link_book">
                         <ion-icon name="time-outline" class="icon_book"></ion-icon>
                         <h3 class="h3_book">História</h3>
                     </a>
-                    <a href="https://drive.google.com/drive/folders/1-AdRhnRZqI4kc6KSPTNyHwNIoBMjfbe5?usp=drive_link" class="link_book">
+                    <a href="https://drive.google.com/drive/folders/1-AdRhnRZqI4kc6KSPTNyHwNIoBMjfbe5?usp=drive_link"
+                        class="link_book">
                         <ion-icon name="globe-outline" class="icon_book"></ion-icon>
                         <h3 class="h3_book">Outros</h3>
                     </a>
                 </li>
             </ul>
-            <p><i>As opções ainda são bastante limitadas, o que pode ser um tanto quanto frustrante para você, estudante. Em breve será possível fazer requisição de livros por e-mail.</i></p>
+            <p><i>As opções ainda são bastante limitadas, o que pode ser um tanto quanto frustrante para você,
+                    estudante. Em breve será possível fazer requisição de livros por e-mail.</i></p>
         </section>
     </main>
 
@@ -674,12 +711,16 @@
             <li class="li_footer">
                 <a class="text_footer" href="https://cmc.ifam.edu.br/">IFAM-CMC</a>
                 <a class="text_footer" href="https://sig.ifam.edu.br/sigaa/verTelaLogin.do">SIGAA</a>
-                <a class="text_footer" href="https://www.instagram.com/calfis_ifam?utm_source=ig_web_button_share_sheet&igsh=ZXEzc2diZnZuNmtv">CALFÍS</a>
+                <a class="text_footer"
+                    href="https://www.instagram.com/calfis_ifam?utm_source=ig_web_button_share_sheet&igsh=ZXEzc2diZnZuNmtv">CALFÍS</a>
             </li>
             <li class="li_footer">
-                <a class="text_footer" href="https://www.instagram.com/ifam_centro?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">IFAM-CMC - Instagram</a>
+                <a class="text_footer"
+                    href="https://www.instagram.com/ifam_centro?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">IFAM-CMC
+                    - Instagram</a>
                 <a class="text_footer" href="https://t.me/+kE_XzX6DiCIxZjgx">IFAM-CMC - Telegram</a>
-                <a class="text_footer" href="https://whatsapp.com/channel /0029VaSQd6o8qlzusy8Q4r45">IFAM-CMC - Whatsapp</a>
+                <a class="text_footer" href="https://whatsapp.com/channel /0029VaSQd6o8qlzusy8Q4r45">IFAM-CMC -
+                    Whatsapp</a>
             </li>
         </ul>
     </footer>
