@@ -926,14 +926,14 @@ footer {
     display: flex;
     justify-content: center;
     width: 100%;
-    top: 77vh;
+    top: 85vh;
     animation: ani_go 3s linear infinite;
     opacity: 1;
 }
 
 .ani_go2 {
     transition: 1s;
-    top: 130vh;
+    top: 135vh;
     opacity: 0;
 }
 
@@ -1041,7 +1041,11 @@ footer {
         width: 80px;
         height: 80px;
     }
-
+    .ani_go2 {
+    transition: 1s;
+    top: 130vh;
+    opacity: 0;
+}
     .p_profs {
         font-size: 10px;
     }
