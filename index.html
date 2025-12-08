@@ -34,11 +34,37 @@
         <ion-icon class="icon_go" name="chevron-down-circle-outline"></ion-icon>
     </div>
 
-    <!--Nav bar do site--->
+    <!--Opções adicionais-->
+    <div class="op_ad" id="opad">
+        <div class="tit_op_">
+            <div class="tit_op_ad">
+                <h3 class="t1 sha">Physics</h3>
+                <ion-icon class="t1 sha" name="planet-outline"></ion-icon>
+            </div>
+            <button class="but_close" id="close_opad">
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+        </div>
+        <div class="degopad"></div>
+        <ul class="ul_opad">
+            <div class="fun_1">
+                <h2 class="sha t2">Funcionaidades</h2>
+                <ion-icon class="sha t2" name="build-outline"></ion-icon>
+            </div>
+            <li class="li_opad">
+                <a href="#tarefas" class="a_opad">Tarefas</a>
+                <a href="#cursos" class="a_opad">Cursos</a>
+                <a href="#livros" class="a_opad">Livros</a>
+                <a href="#arquivos" class="a_opad">Arquivos</a>
+            </li>
+        </ul>
+    </div>
+
+    <!--Navbar do site--->
     <div class="nav_bar">
-        <a href="#" class="link_bar sha" style="display: flex; align-items: center; gap: 5px;">
+        <button id="but_add_opad" class="link_bar sha" style="display: flex; align-items: center; gap: 5px;">
             <ion-icon name="menu-outline" style="font-size: 35px;"></ion-icon>
-        </a>
+        </button>
         <div class="bar_right">
             <a href="#tarefas" class="link_bar sha hover_bar">Tarefas</a>
             <a href="#cursos" class="link_bar sha hover_bar">Cursos</a>

@@ -108,9 +108,7 @@ window.addEventListener('scroll', () => {
         box_info_2.style.opacity = '1';
         box_info_3.style.opacity = '1';
     }
-})
-
-elementos_animados.conv.style.opacity = '0';
+}); elementos_animados.conv.style.opacity = '0';
 window.addEventListener('scroll', () => {
 
     elementos_animados.botoes_iniciais.style.transition = '1s';
@@ -120,7 +118,7 @@ window.addEventListener('scroll', () => {
     } else {
         elementos_animados.conv.style.opacity = '1';
     }
-})
+});
 
 //Main (conteúdo principal)
 //Cursos (interações e atividade)
@@ -134,7 +132,7 @@ window.addEventListener('scroll', () => {
     } else {
         cursos.style.opacity = '1';
     }   
-})
+});
 
 //Icon go
 window.addEventListener('scroll', () => {
@@ -144,16 +142,24 @@ window.addEventListener('scroll', () => {
     } else {
         icon_go.classList.add("ani_go2");
     }
-})
+});
 
 //Open cursos para o usuário
 let cursos_g = document.getElementById("ofc_curso");
-document.getElementById("artc_links").style.display = 'none'
+document.getElementById("artc_links").style.display = 'none';
 cursos_g.addEventListener('click', () => {
-    document.getElementById("artc_links").style.display = ''
+    document.getElementById("artc_links").style.display = '';
+}); document.getElementById("but_ocult_curso").addEventListener('click', () => {
+    document.getElementById("artc_links").style.display = 'none';
+});
+
+//Opções adicionais
+document.getElementById("opad").style.display = 'none';
+
+document.getElementById("but_add_opad").addEventListener('click', () => {
+    document.getElementById("opad").style.display = '';
 })
 
-document.getElementById("but_ocult_curso").addEventListener('click', () => {
-    document.getElementById("artc_links").style.display = 'none'
+document.getElementById("close_opad").addEventListener('click', () => {
+    document.getElementById("opad").style.display = 'none';
 })
-
