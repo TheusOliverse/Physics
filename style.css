@@ -1134,7 +1134,12 @@ footer {
     align-items: center;
     justify-content: center;
 }
+
+
 @media only screen and (orientation: portrait) {
+    .disp5{
+        display: none;
+    }
     .op_ad{
         width: 50%;
     }
