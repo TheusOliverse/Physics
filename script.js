@@ -155,11 +155,18 @@ cursos_g.addEventListener('click', () => {
 
 //Opções adicionais
 document.getElementById("opad").style.display = 'none';
-
 document.getElementById("but_add_opad").addEventListener('click', () => {
     document.getElementById("opad").style.display = '';
-})
-
-document.getElementById("close_opad").addEventListener('click', () => {
+}); document.getElementById("close_opad").addEventListener('click', () => {
     document.getElementById("opad").style.display = 'none';
-})
+});
+
+//Sobrepor
+function sobrepor() {
+    document.getElementById("sobrepor").classList.add("sobrepor_opacity");
+    setTimeout(() => {
+        document.getElementById("sobrepor").style.display = 'none';
+    }, 3600);
+}
+
+sobrepor()

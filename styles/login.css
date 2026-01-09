@@ -1,0 +1,289 @@
+* {
+    color: aliceblue;
+    padding: 0;
+    top: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    --black: black;
+    --cor1: rgba(255, 0, 0, 0);
+    --cor2: white;
+    --cor3: rgba(255, 145, 0, 0.261);
+    --cor4: rgba(255, 255, 255, 0.248);
+    --cor5: rgba(255, 68, 0, 0.399);
+    --cor6: rgba(255, 85, 0, 0.478);
+    --cor7: rgb(255, 119, 0);
+    --cor8: rgb(255, 81, 0);
+}
+
+body {
+    background-image: url(https://wallpapercave.com/wp/wp12560122.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.quest {
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.info_input {
+    display: flex;
+    gap: 15px;
+}
+
+.icon {
+    filter: drop-shadow(0 0 10px var(--cor2));
+    font-size: 30px;
+    color: var(--cor2);
+}
+
+.quest {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+}
+
+.segundo_lado {
+    background: rgba(255, 81, 0, 0.261);
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+.atom {
+    animation: atom 2s linear infinite;
+    color: var(--cor2);
+    font-size: 60px;
+    filter: drop-shadow(0 0 10px var(--black));
+}
+@keyframes atom {
+    0%{opacity: 1;}
+    50%{opacity: 0.5;}
+    100%{opacity: 1;}
+}
+.h2 {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 15px 0px;
+}
+
+.botao_cadastro {
+    transition: 0.4s;
+    background: var(--black);
+    border: none;
+    box-shadow: 0 0 20px var(--black);
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 3px 20px;
+    color: var(--cor2);
+    cursor: pointer;
+}
+
+.botao_cadastro:hover {
+    background: var(--cor2);
+    color: var(--black);
+    transition: 0.4s;
+}
+
+.div_1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
+    background: var(--cor5);
+    box-shadow: 0 0 20px var(--black);
+}
+
+.botao_new {
+    padding: 5px 0px;
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 50px;
+    border-top-left-radius: 20px;
+}
+
+.botao_new {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+    background: none;
+    border: var(--cor2);
+}
+
+.form {
+    display: flex;
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    box-shadow: 0 0 50px var(--black);
+    width: max-content;
+    height: max-content;
+    border: none;
+}
+
+.div {
+    height: auto;
+    background: none;
+    width: 5px;
+}
+
+.rede_social {
+    border: 2px solid var(--cor2);
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.links_2 {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+}
+
+.T {
+    font-size: 20px;
+}
+
+.icon_person {
+    filter: drop-shadow(0 0 10px var(--cor2));
+    font-size: 100px;
+    color: var(--cor2);
+    padding: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--cor2);
+}
+
+.botao {
+    color: var(--cor2);
+    transition: 0.4s;
+    font-size: 20px;
+    padding: 5px 30px;
+    border-radius: 20px;
+    background: var(--cor8);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 10px var(--black);
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.rede_social {
+    transition: 0.3s;
+    color: var(--cor7);
+}
+
+.rede_social:hover {
+    transition: 0.3s;
+    border: 2px solid var(--cor8);
+}
+
+.a {
+    transition: 0.3s;
+}
+
+a:hover .a {
+    transition: 0.3s;
+    color: var(--cor8);
+}
+
+.botao:hover {
+    transition: 0.4s;
+    background: var(--cor2);
+    color: var(--black);
+}
+
+input::placeholder {
+    color: var(--cor2);
+}
+
+.input {
+    font-size: 20px;
+    background: linear-gradient(-90deg, var(--cor1), var(--cor6));
+    color: var(--cor2);
+    border-radius: 10px;
+    border: none;
+    padding: 3px 5px;
+    box-shadow: 0 0 15px var(--black);
+    width: 100%;
+}
+
+.gear {
+    font-size: 100px;
+    filter: drop-shadow(0 0 20px var(--cor2));
+    animation: gear 2s linear infinite;
+}
+
+@keyframes gear {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.load_text {
+    filter: drop-shadow(0 0 20px var(--cor2));
+}
+
+.div_loading {
+    animation: texto 1s linear infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+@keyframes texto {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.glow {
+    filter: drop-shadow(0 0 10px var(--cor2));
+}

@@ -996,7 +996,7 @@ footer {
 
 /*detalhes sobre os cursos*/
 
-.ul_cursos{
+.ul_cursos {
     transition: 0.3s;
     display: flex;
     background: var(--cor6);
@@ -1008,7 +1008,7 @@ footer {
     gap: 20px;
 }
 
-.article_links{
+.article_links {
     padding: 40px 0px;
     padding: 20px;
     display: flex;
@@ -1016,7 +1016,7 @@ footer {
     gap: 30px;
 }
 
-.but_ocult_curso{
+.but_ocult_curso {
     background: none;
     color: red;
     border-radius: 20px;
@@ -1024,25 +1024,26 @@ footer {
     border: 2px solid red;
 }
 
-.hover_curso{
+.hover_curso {
     transition: 0.3s;
 }
-.hover_curso:hover{
+
+.hover_curso:hover {
     transition: 0.3s;
     color: orangered;
 }
 
-.artc_links{
+.artc_links {
     display: none;
 }
 
 /*Opções adicionais*/
-.link_bar{
+.link_bar {
     background: none;
     border: none;
 }
 
-.op_ad{
+.op_ad {
     overflow-y: auto;
     z-index: 10;
     position: fixed;
@@ -1055,14 +1056,14 @@ footer {
     gap: 15px;
 }
 
-.tit_op_ad{
+.tit_op_ad {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5px;
 }
 
-.tit_op_{
+.tit_op_ {
     padding: 0px 10px;
     padding-top: 20px;
     display: flex;
@@ -1072,18 +1073,18 @@ footer {
 
 }
 
-.t1{
+.t1 {
     font-size: 25px;
 }
 
-.li_opad{
+.li_opad {
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 0px 20px;
 }
 
-.a_opad{
+.a_opad {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     transition: 0.4s;
     filter: drop-shadow(0 0 10px black);
@@ -1095,36 +1096,37 @@ footer {
     box-shadow: 0 0 10px black;
 }
 
-.a_opad:hover{
+.a_opad:hover {
     transition: 0.4s;
     background: white;
-    color: black;    
+    color: black;
     box-shadow: 0 0 10px white;
 }
 
-.ul_opad{
+.ul_opad {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.t2{
+.t2 {
     font-size: 20px;
 }
 
-.fun_1{
+.fun_1 {
     padding: 0px 10px;
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.degopad{
+.degopad {
     height: 5px;
     width: 100%;
     background: linear-gradient(90deg, rgba(9, 9, 9, 0), rgb(255, 255, 255), rgba(0, 0, 0, 0));
 }
-.but_close{
+
+.but_close {
     background: none;
     border: 2px solid orange;
     color: orange;
@@ -1135,23 +1137,62 @@ footer {
     justify-content: center;
 }
 
+/*Destaque*/
+.sobrepor {
+    transition: 5s;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgb(0, 0, 0);
+    z-index: 20;
+}
+
+.sobrepor_opacity {
+    transition: 5s;
+    opacity: 0;
+}
+
+.destaque {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.tit_des {
+    font-family: sans-serif;
+    text-transform: uppercase;
+
+    color: transparent;
+
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+
+    font-size: 140px;
+}
 
 @media only screen and (orientation: portrait) {
-    .disp5{
+    .disp5 {
         display: none;
     }
-    .op_ad{
+
+    .op_ad {
         width: 50%;
     }
+
     .img_profs {
         width: 80px;
         height: 80px;
     }
+
     .ani_go2 {
-    transition: 1s;
-    top: 130vh;
-    opacity: 0;
-}
+        transition: 1s;
+        top: 130vh;
+        opacity: 0;
+    }
+
     .p_profs {
         font-size: 10px;
     }

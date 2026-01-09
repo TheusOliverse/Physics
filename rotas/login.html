@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../styles/login.css">
+</head>
+
+<body>
+    <nav>
+        <form id="form" class="form">
+            <div class="segundo_lado">
+                <div class="text">
+                    <h1 class="glow">Bem vindo!</h1>
+                </div>
+                <div class="div_1">
+                    <ion-icon class="atom" name="logo-react"></ion-icon>
+                </div>
+
+                <h2 class="h2">
+                    <i class="glow">Novo Usuário</i>
+                </h2>
+
+                <div class="botao_new">
+                    <button class="botao_cadastro" onclick="cadastro()">Criar conta</button>
+                    <button class="botao_cadastro" onclick="">Entrar sem conta</button>
+                </div>
+
+                <div class="links_2">
+                    <a href="" class="rede_social">
+                        <ion-icon class="T glow a" name="logo-discord"></ion-icon>
+                    </a>
+                    <a href="" class="rede_social">
+                        <ion-icon class="T glow a" name="logo-instagram"></ion-icon>
+                    </a>
+                    <a href="" class="rede_social">
+                        <ion-icon class="T glow a" name="logo-chrome"></ion-icon>
+                    </a>
+                </div>
+            </div>
+            <div class="quest">
+                <div class="icon_login">
+                    <ion-icon class="icon_person" name="people-outline"></ion-icon>
+                </div>
+                <div class="info_input">
+                    <ion-icon class="icon glow" name="person-outline"></ion-icon>
+                    <input class="input" type="text" id="matricula" placeholder="Matrícula...">
+                </div>
+                <div class="info_input">
+                    <ion-icon class="icon glow" name="key-outline"></ion-icon>
+                    <input class="input" type="text" id="senha" placeholder="Senha...">
+                </div>
+                <div class="links">
+                    <a href="">Esqueceu a senha?</a>
+                    <a href="">Palavra-chave</a>
+                </div>
+                <button class="botao" type="button" onclick="login()">Entrar</button>
+            </div>
+        </form>
+
+        <div class="div_loading" id="div_loading">
+            <div id="gear">
+                <ion-icon class="gear" name="settings-outline"></ion-icon>
+            </div>
+            <h2 class="load_text">Carregando...</h2>
+        </div>
+    </nav>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="../scripts/login.js"></script>
+</body>
+
+</html>
