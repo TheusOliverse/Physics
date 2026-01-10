@@ -86,7 +86,7 @@ window.addEventListener('scroll', () => {
         elementos_animados.titulo.classList.remove(`${classes.titulo}`);
         elementos_animados.subtitulo.classList.remove(`${classes.subtitulo}`);
         elementos_animados.abaixo_do_subtitulo.classList.remove(`${classes.abaixo_do_subtitulo}`);
-        
+
         //Parte II (Botões interativos)
         elementos_animados.botoes_iniciais.style.gap = '20px';
         elementos_animados.botoes_iniciais.style.opacity = '1';
@@ -131,7 +131,7 @@ window.addEventListener('scroll', () => {
         cursos.style.opacity = '0';
     } else {
         cursos.style.opacity = '1';
-    }   
+    }
 });
 
 //Icon go
@@ -168,5 +168,35 @@ function sobrepor() {
         document.getElementById("sobrepor").style.display = 'none';
     }, 3600);
 }
-
 sobrepor()
+
+//News API (Notícias do G1)
+const rssUrl = 'https://g1.globo.com/rss/g1/educacao';
+const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
+
+async function carregarNoticias() {
+    try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        if (data.status === 'ok') {
+            const container = document.getElementById('newsAPI');
+            container.innerHTML = '';
+            data.items.forEach(item => {
+                const card = `
+                            <div class="noticia">
+                                <h2>${item.title}</h2>
+                                <p class="p_news">${item.description}</p>
+                                <small>Publicado em: ${new Date(item.pubDate).toLocaleDateString('pt-BR')}</small>
+                                <br>
+                                <a href="${item.link}" target="_blank">Ler notícia completa</a>
+                            </div>
+                        `;
+                container.innerHTML += card;
+            });
+        };
+    } catch (error) {
+        document.getElementById('newsAPI').innerHTML = "Erro ao carregar notícias.";
+        console.error(error);
+    };
+};
+carregarNoticias()
