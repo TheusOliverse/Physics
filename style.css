@@ -1261,6 +1261,139 @@ footer {
     align-items: center;
 }
 
+.text_font {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*Pesquisa*/
+.pesquisa_cientifica {
+    background: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 0px;
+    background: #000000;
+}
+
+.results {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input_pesquisa2 {
+    border-radius: 10px;
+    color: var(--black);
+    padding: 0px 10px;
+
+}
+
+.button_pesquisa {
+    cursor: pointer;
+    transition: 0.3s;
+    background: var(--cor2);
+    border-radius: 50%;
+    padding: 6px;
+    box-shadow: 0 0 10px var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: var(--black);
+    color: var(--white);
+}
+
+.icon_pesquisa_pes {
+    font-size: 30px;
+}
+
+.button_pesquisa:hover {
+    transition: 0.3s;
+    background: var(--black);
+}
+
+.artigo_pesquisa {
+    padding: 15px;
+    border-bottom: 1px solid var(--white);
+    transition: background 0.2s;
+}
+
+.artigo_pesquisa:hover {
+    background: var(--white);
+}
+
+.tit_pes {
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo_pesquisa {
+    color: var(--cor3);
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    display: block;
+}
+
+.stats_pesquisa {
+    font-size: 0.85em;
+    color: #555;
+    margin-top: 5px;
+}
+
+.badge_pesquisa {
+    background: #e1f5fe;
+    color: #01579b;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.resumo_pesquisa {
+    font-size: 0.9em;
+    color: var(--white);
+    margin-top: 8px;
+    line-height: 1.4;
+}
+
+.b {
+    color: var(--black);
+}
+
+.ocult_pes{
+    padding: 5px;
+    border-radius: 10px;
+    color: var(--cor3);
+    background: none;
+    border: 2px solid var(--cor3);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.ocult_pes:hover{
+    transition: 0.3s;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+.ocult_pes p{
+    transition: 0.3s;
+    color: var(--cor3);
+}
+.ocult_pes:hover p{
+    transition: 0.3s;
+    color: var(--white);
+}
+
 @media only screen and (orientation: portrait) {
     .disp5 {
         display: none;

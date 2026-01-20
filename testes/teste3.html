@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Semantic Search - Impacto Acadêmico</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #f0f4f8; padding: 20px; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .search-box { display: flex; gap: 10px; margin-bottom: 20px; }
+        input { flex: 1; padding: 12px; border: 1px solid #d1d9e0; border-radius: 6px; }
+        button { padding: 12px 20px; background: #004dcf; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; }
+        .artigo { padding: 15px; border-bottom: 1px solid #eee; transition: background 0.2s; }
+        .artigo:hover { background: #f9f9f9; }
+        .titulo { color: #004dcf; text-decoration: none; font-size: 1.1em; font-weight: bold; display: block; }
+        .stats { font-size: 0.85em; color: #555; margin-top: 5px; }
+        .badge { background: #e1f5fe; color: #01579b; padding: 2px 8px; border-radius: 12px; font-weight: bold; }
+        .resumo { font-size: 0.9em; color: #333; margin-top: 8px; line-height: 1.4; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>🎓 Semantic Scholar Search</h2>
+    <div class="search-box">
+        <input type="text" id="query" placeholder="Digite um tema (ex: Machine Learning, COVID-19)">
+        <button onclick="buscarArtigos()">Pesquisar</button>
+    </div>
+    <div id="status"></div>
+    <div id="resultados"></div>
+</div>
+
+<script>
+    async function buscarArtigos() {
+        const query = document.getElementById('query').value;
+        const resultadosDiv = document.getElementById('resultados');
+        const status = document.getElementById('status');
+
+        if (!query) return;
+
+        status.innerText = "Consultando base de dados semântica...";
+        resultadosDiv.innerHTML = "";
+
+        // Endpoint de busca da Semantic Scholar
+        // Solicitamos campos específicos: título, resumo, ano, contagem de citações e link
+        const url = `https://api.semanticscholar.org/graph/v1/paper/search?query=${encodeURIComponent(query)}&limit=5&fields=title,abstract,year,citationCount,url`;
+
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+
+            status.innerText = "";
+
+            if (!data.data || data.data.length === 0) {
+                status.innerText = "Nenhum artigo encontrado.";
+                return;
+            }
+
+            data.data.forEach(artigo => {
+                const div = document.createElement('div');
+                div.className = 'artigo';
+                div.innerHTML = `
+                    <a href="${artigo.url}" target="_blank" class="titulo">${artigo.title}</a>
+                    <div class="stats">
+                        <span>📅 ${artigo.year || 'N/A'}</span> | 
+                        <span class="badge">🔥 ${artigo.citationCount} citações</span>
+                    </div>
+                    <p class="resumo">${artigo.abstract ? artigo.abstract.substring(0, 200) + '...' : 'Resumo não disponível.'}</p>
+                `;
+                resultadosDiv.appendChild(div);
+            });
+        } catch (error) {
+            status.innerText = "Erro ao carregar dados. Verifique sua conexão.";
+            console.error(error);
+        }
+    }
+</script>
+
+</body>
+</html>

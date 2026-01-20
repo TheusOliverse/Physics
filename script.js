@@ -185,7 +185,7 @@ async function carregarNoticias() {
                 const card = `
                             <div class="noticia">
                                 <h2>${item.title}</h2>
-                                <p class="p_news">${item.description}</p>
+                                 <p class="p_news">${item.description}</p>
                                 <small>Publicado em: ${new Date(item.pubDate).toLocaleDateString('pt-BR')}</small>
                                 <br>
                                 <a href="${item.link}" target="_blank">Ler notícia completa</a>
@@ -200,3 +200,51 @@ async function carregarNoticias() {
     };
 };
 carregarNoticias()
+
+//Pesquisa de artigos
+const res_ocult = document.getElementById("ocult_pes");
+res_ocult.style.display = 'none';
+
+async function buscarArtigos() {
+    const query = document.getElementById('input_pesquisa').value;
+    const resultadosDiv = document.getElementById('resultados');
+    const status = document.getElementById('status');
+
+    if (!query) return;
+    status.innerText = "Verificando...";
+    resultadosDiv.innerHTML = "";
+    const url = `https://api.semanticscholar.org/graph/v1/paper/search?query=${encodeURIComponent(query)}&limit=5&fields=title,abstract,year,citationCount,url`;
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+
+        status.innerText = "";
+
+        if (!data.data || data.data.length === 0) {
+            status.innerText = "Nenhum artigo encontrado.";
+            return;
+        }
+        data.data.forEach(artigo => {
+            const div = document.createElement('div');
+            div.className = 'artigo';
+            div.innerHTML = `
+                    <a href="${artigo.url}" target="_blank" class="titulo_pesquisa">${artigo.title}</a>
+                    <div class="stats_pesquisa">
+                        <span>📅 ${artigo.year || 'N/A'}</span> | 
+                        <span class="badge_pesquisa">🔥 ${artigo.citationCount} citações</span>
+                    </div>
+                    <p class="resumo_pesquisa">${artigo.abstract ? artigo.abstract.substring(0, 200) + '...' : 'Resumo não disponível.'}</p>
+                `;
+            resultadosDiv.appendChild(div);
+            res_ocult.style.display = '';
+        })
+    } catch (error) {
+        console.error(error);
+        buscarArtigos()
+    } 
+} 
+
+function ocult_pes() {
+    res_ocult.style.display = 'none';
+    document.getElementById("resultados").innerHTML = '';
+}

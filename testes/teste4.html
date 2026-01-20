@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Clima Local</title>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; padding: 50px; background: #f0f2f5; }
+        .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
+        h2 { margin: 0; color: #333; }
+        .temp { font-size: 3rem; font-weight: bold; color: #007bff; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>Manaus</h2>
+        <div id="loading">Carregando...</div>
+        <div id="conteudo" style="display:none">
+            <div class="temp" id="temperatura">--°C</div>
+            <p id="vento">Vento: -- km/h</p>
+        </div>
+    </div>
+
+    <script>
+        async function buscarClima() {
+            const lat = 3.06;
+            const lon = 60.01;
+            const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`;
+
+            try {
+                const resposta = await fetch(url);
+                const dados = await resposta.json();
+                console.log(dados)
+                document.getElementById('temperatura').innerText = `${Math.round(dados.current_weather.temperature)}°C`;
+                document.getElementById('vento').innerText = `Vento: ${dados.current_weather.windspeed} km/h`;
+                
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('conteudo').style.display = 'block';
+            } catch (erro) {
+                document.getElementById('loading').innerText = "Erro ao carregar dados.";
+            }
+        }
+
+        buscarClima();
+    </script>
+</body>
+</html>

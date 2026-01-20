@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Drive Direct Downloader</title>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; padding: 50px; background: #f0f2f5; }
+        .container { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 100%; max-width: 500px; }
+        input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { width: 100%; padding: 12px; background: #1a73e8; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; }
+        button:hover { background: #1557b0; }
+        .info { font-size: 0.85em; color: #666; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Drive Downloader</h2>
+    <p class="info">Cole o link público do Google Drive abaixo:</p>
+    <input type="text" id="driveLink" placeholder="https://drive.google.com/file/d/...">
+    <button onclick="baixarArquivo()">Gerar Download Direto</button>
+    <div id="msg" style="margin-top: 15px; text-align: center;"></div>
+</div>
+
+<script>
+    function baixarArquivo() {
+        const linkInput = document.getElementById('driveLink').value;
+        const msg = document.getElementById('msg');
+        
+        // Expressão regular para extrair o ID do arquivo do link do Drive
+        const regExp = /\/d\/([a-zA-Z0-9-_]+)|id=([a-zA-Z0-9-_]+)/;
+        const match = linkInput.match(regExp);
+
+        if (match) {
+            const fileId = match[1] || match[2];
+            // Monta a URL de download direto
+            const directLink = `https://drive.google.com/uc?export=download&id=${fileId}`;
+            
+            msg.innerHTML = `<span style="color: green;">Iniciando download...</span>`;
+            
+            // Cria um elemento temporário para disparar o download
+            const tempLink = document.createElement('a');
+            tempLink.href = directLink;
+            tempLink.setAttribute('download', ''); 
+            document.body.appendChild(tempLink);
+            tempLink.click();
+            document.body.removeChild(tempLink);
+        } else {
+            msg.innerHTML = `<span style="color: red;">Link inválido ou não reconhecido.</span>`;
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quântica</title>
+    <style>
+        body { background: #111; color: #0f0; font-family: monospace; text-align: center; }
+        canvas { border: 2px solid #333; background: #000; margin-top: 20px; }
+        .controls { margin: 20px; padding: 10px; background: #222; border-radius: 8px; display: inline-block; }
+        input { width: 50px; }
+    </style>
+</head>
+<body>
+    <h1>Função de Onda</h1>
+    <div class="controls">
+        Nível de Energia (n): <input type="number" id="nLevel" value="1" min="1" max="10">
+        Velocidade: <input type="range" id="speed" min="1" max="10" value="5">
+    </div>
+    <br>
+    <canvas id="quantumCanvas" width="800" height="400"></canvas>
+
+    <script>
+        const canvas = document.getElementById('quantumCanvas');
+        const ctx = canvas.getContext('2d');
+        const nInput = document.getElementById('nLevel');
+        const speedInput = document.getElementById('speed');
+
+        let time = 0;
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            const n = parseInt(nInput.value);
+            const speed = parseFloat(speedInput.value) * 0.02;
+            const L = canvas.width - 100;
+            const amplitude = 100;
+            const offsetX = 50;
+            const centerY = canvas.height / 2;
+
+            ctx.strokeStyle = '#555';
+            ctx.strokeRect(offsetX, 50, L, canvas.height - 100);
+
+            ctx.beginPath();
+            ctx.lineWidth = 2;
+
+            for (let x = 0; x <= L; x++) {
+                const spatial = Math.sin((n * Math.PI * x) / L);
+                const phase = time * n * n;    
+                const realPart = spatial * Math.cos(phase);
+                const drawX = x + offsetX;
+                const drawY = centerY - (realPart * amplitude);
+                if (x === 0) ctx.moveTo(drawX, drawY);
+                else ctx.lineTo(drawX, drawY);
+            }
+
+            ctx.strokeStyle = '#00ffcc';
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.fillStyle = 'rgba(0, 255, 204, 0.2)';
+            for (let x = 0; x <= L; x++) {
+                const spatial = Math.sin((n * Math.PI * x) / L);
+                const probDensity = spatial * spatial; // |Ψ|²
+                const drawX = x + offsetX;
+                const drawY = centerY - (probDensity * amplitude);
+                if (x === 0) ctx.moveTo(drawX, drawY);
+                else ctx.lineTo(drawX, drawY);
+            }
+
+            ctx.lineTo(offsetX + L, centerY);
+            ctx.lineTo(offsetX, centerY);
+            ctx.fill();
+            time += speed;
+            requestAnimationFrame(draw);
+        }
+        draw();
+    </script>
+</body>
+</html>
