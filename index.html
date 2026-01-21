@@ -174,6 +174,25 @@
     </div>
 
     <main class="main">
+        <!--Atividades da semana--->
+        <section class="section5">
+            <div class="div_tit_news">
+                <ion-icon name="calendar-outline" class="icon_news sha"></ion-icon>
+                <h2 class="h_news sha">Ativ. da Semana</h2>
+            </div>
+            <div class="box_news">
+                <article class="art_news">
+                    <div>
+                        <h2 class="h2_news">#Atividade</h2>
+                        <p class="p_desc_news">Teste</p>
+                    </div>
+                    <ion-icon name="alert-circle-outline" class="icon_art"></ion-icon>
+                </article>
+            </div>
+        </section>
+
+        <!--Horários da semana-->
+
         <!--Noticias API-->
         <section class="NewsAPI">
             <h1 class="tit_noticia"> <ion-icon class="icon_new" name="newspaper-outline"></ion-icon>
@@ -184,8 +203,6 @@
                 <div id="newsAPI"></div>
             </div>
         </section>
-
-        <!--Horários da semana-->
 
         <!--Siga o CALFIS--->
         <section id="start" class="section1">
@@ -209,6 +226,42 @@
             </div>
         </section>
 
+        <!--Oferecimento de cursos--->
+        <section class="section4" id="cursos">
+            <div class="div_sec4">
+                <h1 class="h_sec4">CURSOS GRATUITOS COM CERTIFICAÇÃO GRATUITA, 100% SEGURO!</h1>
+                <p class="p_sec4">Disponibilizado uma lista de links que direcionam o usuário para várias plataformas
+                    que oferecem cursos gratuitos.</p>
+                <button id="ofc_curso" class="but_sec4">Experimentar</button>
+            </div>
+            <div>
+                <img src="https://i.pinimg.com/736x/29/d6/78/29d678acd6670fcd03f4202643d42585.jpg" class="img_sec4">
+            </div>
+        </section>
+
+        <!--Lista de links para fazer cursos--->
+        <article class="article_links" id="artc_links">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0px 30px;">
+                <h3 style="color: red; filter: drop-shadow(0 0 10px red);">Atenção!</h3>
+                <button class="but_ocult_curso" id="but_ocult_curso">Ocultar</button>
+            </div>
+            <p class="sha">Em alguns sites você precisa achar os cursos com o destaque "gratuito". No caso do <i
+                    style="color: orange;">Aprenda Mais MEC</i> e o <i style="color: orange;">Mais IFMG</i> todos os
+                cursos são 100% gratuitos.</p>
+            <ul class="ul_cursos">
+                <a class="hover_curso" href="https://mais.ifmg.edu.br/maisifmg/">Mais IFMG</a>
+                <a class="hover_curso" href="https://aprendamais.mec.gov.br/">Aprenda Mais MEC</a>
+                <a class="hover_curso" href="https://www.coursera.org/">Coursera</a>
+                <a class="hover_curso" href="https://www.ev.org.br/">Bradesco</a>
+                <a class="hover_curso" href="https://www.freecodecamp.org">Programação gratuita (FCC)</a>
+                <a class="hover_curso" href="https://www.cursosvirtuais.net/cursos/animais-pets.html">Cursos
+                    Virtuais</a>
+                <a class="hover_curso" href="https://www.primecursos.com.br/">Prime cursos</a>
+                <a class="hover_curso" href="https://educacao-executiva.fgv.br/cursos/gratuitos">FGV Online</a>
+            </ul>
+        </article>
+
+        <!--Professores-->
         <section class="profs" id="profs">
             <h2 class="sha" style="display: flex; align-items: center; gap: 10px;">
                 <ion-icon class="sha" style="font-size: 25px;" name="person-outline"></ion-icon>
@@ -247,58 +300,6 @@
                     <p class="p_profs">Química</p>
                 </li>
             </ul>
-        </section>
-
-        <!--Oferecimento de cursos--->
-        <section class="section4" id="cursos">
-            <div class="div_sec4">
-                <h1 class="h_sec4">CURSOS GRATUITOS COM CERTIFICAÇÃO GRATUITA, 100% SEGURO!</h1>
-                <p class="p_sec4">Disponibilizado uma lista de links que direcionam o usuário para várias plataformas
-                    que oferecem cursos gratuitos.</p>
-                <button id="ofc_curso" class="but_sec4">Experimentar</button>
-            </div>
-            <div>
-                <img src="https://i.pinimg.com/736x/29/d6/78/29d678acd6670fcd03f4202643d42585.jpg" class="img_sec4">
-            </div>
-        </section>
-
-        <!--Lista de links para fazer cursos--->
-        <article class="article_links" id="artc_links">
-            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0px 30px;">
-                <h3 style="color: red; filter: drop-shadow(0 0 10px red);">Atenção!</h3>
-                <button class="but_ocult_curso" id="but_ocult_curso">Ocultar</button>
-            </div>
-            <p class="sha">Em alguns sites você precisa achar os cursos com o destaque "gratuito". No caso do <i
-                    style="color: orange;">Aprenda Mais MEC</i> e o <i style="color: orange;">Mais IFMG</i> todos os
-                cursos são 100% gratuitos.</p>
-            <ul class="ul_cursos">
-                <a class="hover_curso" href="https://mais.ifmg.edu.br/maisifmg/">Mais IFMG</a>
-                <a class="hover_curso" href="https://aprendamais.mec.gov.br/">Aprenda Mais MEC</a>
-                <a class="hover_curso" href="https://www.coursera.org/">Coursera</a>
-                <a class="hover_curso" href="https://www.ev.org.br/">Bradesco</a>
-                <a class="hover_curso" href="https://www.freecodecamp.org">Programação gratuita (FCC)</a>
-                <a class="hover_curso" href="https://www.cursosvirtuais.net/cursos/animais-pets.html">Cursos
-                    Virtuais</a>
-                <a class="hover_curso" href="https://www.primecursos.com.br/">Prime cursos</a>
-                <a class="hover_curso" href="https://educacao-executiva.fgv.br/cursos/gratuitos">FGV Online</a>
-            </ul>
-        </article>
-
-        <!--Atividades da semana--->
-        <section class="section5">
-            <div class="div_tit_news">
-                <ion-icon name="calendar-outline" class="icon_news sha"></ion-icon>
-                <h2 class="h_news sha">Ativ. da Semana</h2>
-            </div>
-            <div class="box_news">
-                <article class="art_news">
-                    <div>
-                        <h2 class="h2_news">#Atividade</h2>
-                        <p class="p_desc_news">Teste</p>
-                    </div>
-                    <ion-icon name="alert-circle-outline" class="icon_art"></ion-icon>
-                </article>
-            </div>
         </section>
 
         <!--Lista de eventos do IFAM--->
@@ -675,7 +676,8 @@
                 <button class="ocult_pes" onclick="ocult_pes()" id="ocult_pes" type="button">
                     <p>Ocultar</p>
                 </button>
-                <button class="button_pesquisa" onclick="buscarArtigos()"><ion-icon name="search-outline"class="icon_proc_perio"></ion-icon></button>
+                <button class="button_pesquisa" onclick="buscarArtigos()"><ion-icon name="search-outline"
+                        class="icon_proc_perio"></ion-icon></button>
             </div>
             <div id="status"></div>
             <div class="results" id="resultados">Zero resultados</div>
@@ -750,6 +752,27 @@
             </ul>
             <p><i>As opções ainda são bastante limitadas, o que pode ser um tanto quanto frustrante para você,
                     estudante. Em breve será possível fazer requisição de livros por e-mail.</i></p>
+        </section>
+
+        <!--Dúvidas--->
+        <section class="duvidas_d" id="duvida">
+            <form id="form_duvidas" action="https://formsubmit.co/matheusoliveira8114@gmail.com" method="post">
+                <div class="div_d">
+                    <h1 class="mensagem_d">Dúvidas?</h1>
+                    <p class="desc_d">Você pode indicar livros, avisar sobre erros, sugerir ideias e muito mais!</p>
+                    <label for="email"></label>
+                    <input class="input_d" type="email" name="email" id="email_d" required placeholder="Coloque seu e-mail">
+                    <label for="message"></label>
+                    <input class="input_d" type="text" name="message" id="message_d" required placeholder="Escreva o texto aqui...">
+                    <input type="hidden" name="_next" value="https://github.com/TheusOliverse/Physics/rotas/confirmacao.html">
+                </div>
+                <div class="botoes_d">
+                    <button class="botao_d" type="submit">
+                        <h4>Enviar</h4>
+                        <ion-icon class="icone" name="paper-plane-outline"></ion-icon>
+                    </button>
+                </div>
+            </form>
         </section>
     </main>
 
