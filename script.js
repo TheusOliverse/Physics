@@ -241,10 +241,27 @@ async function buscarArtigos() {
     } catch (error) {
         console.error(error);
         buscarArtigos()
-    } 
-} 
+    }
+}
 
 function ocult_pes() {
     res_ocult.style.display = 'none';
     document.getElementById("resultados").innerHTML = '';
+}
+
+//Professores dos períodos
+const p1 = document.getElementById("p1_profs");
+const p2 = document.getElementById("p2_profs");
+
+p1.style.display = 'none';
+p2.style.display = 'none';
+
+function profs_list(x) {
+    if (x == 1) {
+        p1.style.display = '';
+        p2.style.display = 'none';
+    } else if (x == 2) {
+        p1.style.display = 'none';
+        p2.style.display = '';
+    }
 }

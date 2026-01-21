@@ -1395,7 +1395,7 @@ footer {
 }
 
 /*Duvidas*/
-#form_duvidas{
+#form_duvidas {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -1410,7 +1410,7 @@ footer {
     backdrop-filter: blur(10px);
 }
 
-.botao_d{
+.botao_d {
     padding: 6px;
     border: none;
     box-shadow: 0 0 10px var(--black);
@@ -1421,11 +1421,11 @@ footer {
     background: rgba(0, 255, 0, 0.662);
 }
 
-.mensagem_d{
+.mensagem_d {
     font-family: 'Times New Roman', Times, serif;
 }
 
-.input_d{
+.input_d {
     border: none;
     box-shadow: 0 0 10px var(--black);
     border-radius: 10px;
@@ -1434,7 +1434,7 @@ footer {
     background: linear-gradient(-90deg, rgba(255, 255, 255, 0.235), rgba(0, 0, 0, 0.503));
 }
 
-.div_d{
+.div_d {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -1442,10 +1442,12 @@ footer {
     justify-content: center;
     align-content: center;
 }
-.desc_d{
+
+.desc_d {
     filter: drop-shadow(0 0 5px rgb(0, 149, 255));
 }
-.duvidas_d{
+
+.duvidas_d {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1455,6 +1457,20 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(https://images4.alphacoders.com/882/thumb-1920-882586.jpg);
+}
+
+/*Professores*/
+.bp{
+    transition: 0.3s    ;
+    background: var(--cor3);
+    padding: 6px;
+    border-radius: 10px;
+    border: none;
+}
+
+.bp:hover{
+    transition: 0.3s;
+    background: var(--black);
 }
 
 @media only screen and (orientation: portrait) {

@@ -130,7 +130,7 @@
             IFAM</h2>
         <ul class="ifam_info_ul">
             <li class="ifam_info_li">
-                <img src="https://www.ifpb.edu.br/prpipg/pesquisa/imagens-pesquisa/ifpb.png/@@images/0609b1d7-4a7d-41be-bd18-081ecb35eb9e.png"
+                <img src="img/images.jfif"
                     class="display2">
                 <img class="img_inf_ifam display1"
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKYV7SLjA2CAcnaJfFnRlZJ4GR9bYWopMwSA&s">
@@ -226,19 +226,6 @@
             </div>
         </section>
 
-        <!--Oferecimento de cursos--->
-        <section class="section4" id="cursos">
-            <div class="div_sec4">
-                <h1 class="h_sec4">CURSOS GRATUITOS COM CERTIFICAÇÃO GRATUITA, 100% SEGURO!</h1>
-                <p class="p_sec4">Disponibilizado uma lista de links que direcionam o usuário para várias plataformas
-                    que oferecem cursos gratuitos.</p>
-                <button id="ofc_curso" class="but_sec4">Experimentar</button>
-            </div>
-            <div>
-                <img src="https://i.pinimg.com/736x/29/d6/78/29d678acd6670fcd03f4202643d42585.jpg" class="img_sec4">
-            </div>
-        </section>
-
         <!--Lista de links para fazer cursos--->
         <article class="article_links" id="artc_links">
             <div style="display: flex; justify-content: space-between; align-items: center; padding: 0px 30px;">
@@ -265,9 +252,14 @@
         <section class="profs" id="profs">
             <h2 class="sha" style="display: flex; align-items: center; gap: 10px;">
                 <ion-icon class="sha" style="font-size: 25px;" name="person-outline"></ion-icon>
-                Professores (1* Período)
+                Professores (períodos disponíveis)
             </h2>
-            <ul class="ul_profs">
+            <ul>
+                <button class="bp" onclick="profs_list('1')">1* período</button>
+                <button class="bp" onclick="profs_list('2')">2* período</button>
+            </ul>
+
+            <ul id="p1_profs" class="ul_profs">
                 <li class="li_profs">
                     <img src="./Profs/maria stela.jpg" class="img_profs">
                     <h3 class="h3_profs">profa. Maria Stela</h3>
@@ -281,7 +273,7 @@
                 </li>
                 <li class="li_profs">
                     <img src="./Profs/nayara.jpg" class="img_profs">
-                    <h3 class="h3_profs">profa. Nayara</h3>
+                    <h3 class="h3_profs">profa. Nayara Costa</h3>
                     <p class="p_profs">Metodologia da Pesquisa Educacional I</p>
                 </li>
                 <li class="li_profs">
@@ -298,6 +290,39 @@
                     <img src="./Profs/aline_freitas.jpg" class="img_profs">
                     <h3 class="h3_profs">profa. Aline Freitas</h3>
                     <p class="p_profs">Química</p>
+                </li>
+            </ul>
+            <ul id="p2_profs" class="ul_profs">
+                <li class="li_profs">
+                    <img src="Profs/JN.jpg" class="img_profs">
+                    <h3 class="h3_profs">prof. João Neto</h3>
+                    <p class="p_profs">Física I</p>
+                </li>
+                <li class="li_profs">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBoqLSVCj-_fOFFee9xXYQSBDjWYfFX5WB_Q&s"
+                        class="img_profs">
+                    <h3 class="h3_profs">profa. Andréa Rocha</h3>
+                    <p class="p_profs">Cálculo I</p>
+                </li>
+                <li class="li_profs">
+                    <img src="Profs/FR.jpg" class="img_profs">
+                    <h3 class="h3_profs">prof. Fábio Rivas</h3>
+                    <p class="p_profs">Álgebra Linear I</p>
+                </li>
+                <li class="li_profs">
+                    <img src="Profs/kleber.jpg" class="img_profs">
+                    <h3 class="h3_profs">prof. Kleber Bastos</h3>
+                    <p class="p_profs">Física Experimental I</p>
+                </li>
+                <li class="li_profs">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBoqLSVCj-_fOFFee9xXYQSBDjWYfFX5WB_Q&s" class="img_profs">
+                    <h3 class="h3_profs">profa. Amanda Silva</h3>
+                    <p class="p_profs">Sociologia</p>
+                </li>
+                <li class="li_profs">
+                    <img src="Profs/maria stela.jpg" class="img_profs">
+                    <h3 class="h3_profs">profa. Maria Stela</h3>
+                    <p class="p_profs">Org. e legis. da educ.</p>
                 </li>
             </ul>
         </section>
@@ -681,6 +706,19 @@
             </div>
             <div id="status"></div>
             <div class="results" id="resultados">Zero resultados</div>
+        </section>
+
+        <!--Oferecimento de cursos--->
+        <section class="section4" id="cursos">
+            <div class="div_sec4">
+                <h1 class="h_sec4">CURSOS GRATUITOS COM CERTIFICAÇÃO GRATUITA, 100% SEGURO!</h1>
+                <p class="p_sec4">Disponibilizado uma lista de links que direcionam o usuário para várias plataformas
+                    que oferecem cursos gratuitos.</p>
+                <button id="ofc_curso" class="but_sec4">Experimentar</button>
+            </div>
+            <div>
+                <img src="https://i.pinimg.com/736x/29/d6/78/29d678acd6670fcd03f4202643d42585.jpg" class="img_sec4">
+            </div>
         </section>
 
         <!--Biblioteca do Drive--->
